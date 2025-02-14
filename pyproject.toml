@@ -45,6 +45,7 @@ classifiers = [
 ]
 dependencies = [
     "boto3",
+    "gcsfs",
     "fs",
     "fs-s3fs",
     "geopandas>=0.14.4,<1; python_version>='3.9'",
