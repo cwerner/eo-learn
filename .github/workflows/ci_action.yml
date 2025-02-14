@@ -6,6 +6,7 @@ on:
     branches:
       - "master"
       - "develop"
+      - "add_gcs_filesystem"
   workflow_call:
 
 concurrency:
