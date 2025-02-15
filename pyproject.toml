@@ -67,7 +67,7 @@ dependencies = [
 
 full = ["eo-learn[RAY,ZARR,EXTRA,VISUALIZATION]"]
 ray = ["ray[default]"]
-zarr = ["s3fs", "zarr"]
+zarr = ["s3fs", "zarr<3.0.0"]
 extra = ["numba>=0.53.0", "scikit-learn", "scipy", "s2cloudless"]
 visualization = ["graphviz>=0.10.1", "jinja2", "matplotlib", "pygments"]
 docs = [
@@ -222,6 +222,9 @@ max-nested-blocks = 7
 markers = [
     "sh_integration: marks integration tests with Sentinel Hub service",
     "geopedia: marks integration tests with Geopedia",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning"
 ]
 
 [tool.coverage.run]
