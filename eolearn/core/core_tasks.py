@@ -384,7 +384,7 @@ class InitializeFeatureTask(EOTask):
         add_features = set(self.features) - set(self.parse_features(eopatch.get_features()))
 
         for feature in add_features:
-            eopatch[feature] = np.ones(shape, dtype=self.dtype) * self.init_value
+            eopatch[feature] = np.ones(shape, dtype=self.dtype) * self.init_value  # type: ignore[arg-type]
 
         return eopatch
 
